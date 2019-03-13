@@ -22,3 +22,7 @@ Route::get( '/about', 'PagesController@about' );
 // Route::get( '/tasks/create', 'TasksController@create' );
 // Route::post( '/tasks', 'TasksController@store' );
 Route::resource( 'tasks', 'TasksController' );
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');

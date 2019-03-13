@@ -1,17 +1,25 @@
-@extends('masterLayout')
-
-@section('title', 'Todo | About')
-
-@section('pageHeading')
-About Todo
-@endsection
+@extends('layouts.app')
 
 @section('content')
-<h5>{{ $text }}</h5>
-<ul>
-    @foreach( $contacts as $contact )
-        <li>{{ $contact }}</li>
-    @endforeach
-</ul>
-
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="card">
+                <div class="card-header">About Anywhere-Todo</div>
+                <div class="card-body">
+                    <div>
+                        <p>This web application allows you to create and monitor your tasks, irrespective of your location. Focus on your goals with ease! </p>
+                    </div>
+                    <div>
+                        <ul>
+                            <li>
+                                <a href="/tasks">View Tasks</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 @endsection
