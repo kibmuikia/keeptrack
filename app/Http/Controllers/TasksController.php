@@ -64,9 +64,18 @@ class TasksController extends Controller
      * @param  \App\Tasks  $tasks
      * @return \Illuminate\Http\Response
      */
-    public function edit(Tasks $tasks)
+    public function edit($id)
+    // Tasks $tasks
     {
-        //
+        // return $id;
+        // $taskToEdit = Tasks::find($id);
+        if( $taskToEdit = Tasks::find($id)) {
+            // echo "Found data";
+            // return $taskToEdit;
+            return view( 'tasks.edit', compact('taskToEdit') );
+        } else {
+            printf("Error, No data");
+        }
     }
 
     /**
@@ -76,9 +85,21 @@ class TasksController extends Controller
      * @param  \App\Tasks  $tasks
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Tasks $tasks)
+    public function update($id)
+    // Request $request, Tasks $tasks
     {
-        //
+        // dd(request()->all());
+        if( $taskToEdit = Tasks::find($id)) {
+            $taskToEdit->title = request('title');
+            $taskToEdit->description = request('description');
+            if( $taskToEdit->save() ){
+                return redirect('/tasks?status=successful');
+            } else {
+                dd('Update FAILED !');
+            }
+        } else{
+            dd('Not Found');
+        }
     }
 
     /**
@@ -87,8 +108,13 @@ class TasksController extends Controller
      * @param  \App\Tasks  $tasks
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Tasks $tasks)
+    public function destroy($id)
+    // Tasks $tasks
     {
-        //
+        if( Tasks::find($id)->delete() ) {
+            return redirect('/tasks?status=deletesuccessful');
+        } else {
+            dd( 'Delete FAILED !' );
+        }
     }
 }
