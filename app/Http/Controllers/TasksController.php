@@ -93,7 +93,7 @@ class TasksController extends Controller
             $taskToEdit->title = request('title');
             $taskToEdit->description = request('description');
             if( $taskToEdit->save() ){
-                return redirect('/tasks?status=successful');
+                return redirect('/tasks?status=updatesuccessful');
             } else {
                 dd('Update FAILED !');
             }
