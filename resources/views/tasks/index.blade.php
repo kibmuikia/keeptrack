@@ -20,7 +20,8 @@
                     </div>
                 </div>
                 <div class="card-action">
-                  <a href="/tasks/create">New Task</a>
+                  <a href="{{ url('/tasks/create') }}">New Task</a>
+                  <!-- href=" route('logout') " -->
                   <!--<a href="#">This is a link</a>-->
                 </div>
             </div>

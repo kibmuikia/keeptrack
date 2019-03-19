@@ -14,8 +14,8 @@
 
   <!-- CSS  -->
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
-  <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="/css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="/css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
 
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/solid.css"
   integrity="sha384-r/k8YTFqmlOaqRkZuSiE9trsrDXkh07mRaoGBMoDcmA58OHILZPsk29i2BsFng1B"
@@ -216,7 +216,9 @@
   <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
   <!-- <script src="js/materialize.js"></script> -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js" integrity="sha256-U/cHDMTIHCeMcvehBv1xQ052bPSbJtbuiw4QA9cTKz0=" crossorigin="anonymous"></script>
-  <script src="js/init.js"></script>
+  <script src="/js/init.js"></script>
+  <!--  HTML::script('js/script.js')  -->
+  <!-- <link rel="stylesheet" href="URL::asset('assets/css/bootstrap.min.css')"> -->
 
   </body>
 </html>
