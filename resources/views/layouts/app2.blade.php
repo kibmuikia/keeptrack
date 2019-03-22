@@ -217,6 +217,9 @@
   <!-- <script src="js/materialize.js"></script> -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js" integrity="sha256-U/cHDMTIHCeMcvehBv1xQ052bPSbJtbuiw4QA9cTKz0=" crossorigin="anonymous"></script>
   <script src="/js/init.js"></script>
+  <script>
+    M.AutoInit();
+  </script>
   <!--  HTML::script('js/script.js')  -->
   <!-- <link rel="stylesheet" href="URL::asset('assets/css/bootstrap.min.css')"> -->
 

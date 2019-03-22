@@ -42,12 +42,12 @@
                                             </span>
                                         @endif
                                     </div>
-                                    <div class="input-field col s12 m12">
-                                        <input type="checkbox" name="remember" id="remember"
-                                         class=""/>
+                                    <div class="input-field col s3 offset-s6 m3 offset-m6">
                                         <label for="remember">
                                             {{ __('Remember Me') }}
                                         </label>
+                                        <input type="checkbox" name="remember" id="remember"
+                                         class="" style="opacity:1;"/>
                                     </div>
                                     <div class="input-field col s12 m12">
                                         <div class="row">
