@@ -5,21 +5,27 @@
 <div class="container jazaHeight">
     <div class="section">
         <div class="row">
-            <div class="col s12">
+            <div class="col s12 m6 offset-m3">
                 <div class="card">
                     <div class="card-content">
-                        <span class="card-title">Login</span>
                         <div class="row">
-                            <form class="col s12" method="POST" action="{{ route('login') }}">
+                            <div class="col s6 offset-s3 m6 offset-m3">
+                                <span class="card-title">Login</span>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <form class="col s12 m12" method="POST"
+                            action="{{ route('login') }}">
                                 @csrf
                                 <div class="row">
-                                    <div class="input-field col s12 m6 offset-m3">
-                                        <input id="email" type="email" class="validate" name="email" value="{{ old('email') }}" required autofocus>
+                                    <div class="input-field col s12 m12">
+                                        <input id="email" type="email" class="validate" name="email" value="{{ old('email') }}" required >
+                                        <!-- autofocus -->
                                         <label for="email">
                                           {{ __('E-Mail Address') }}
                                         </label>
                                         @if ($errors->has('email'))
-                                            <span class="" role="alert">
+                                            <span class="red-text text-lighten-1" role="">
                                                 <strong>{{ $errors->first('email') }}</strong>
                                             </span>
                                         @endif
@@ -31,7 +37,7 @@
                                             {{ __('Password') }}
                                         </label>
                                         @if ($errors->has('password'))
-                                            <span class="" role="">
+                                            <span class="red-text text-lighten-1" role="">
                                                 <strong>{{ $errors->first('password') }}</strong>
                                             </span>
                                         @endif
@@ -45,13 +51,13 @@
                                     </div>
                                     <div class="input-field col s12 m12">
                                         <div class="row">
-                                            <div class="col s12 m6">
+                                            <div class="col s6 m4">
                                                 <button type="submit"
                                                 class="waves-effect waves-light btn">
                                                     {{ __('Login') }}
                                                 </button>
                                             </div>
-                                            <div class="col s12 m6">
+                                            <div class="col s12 m8">
                                                 @if (Route::has('password.request'))
                                                     <a class="btn btn-link" href="{{ route('password.request') }}">
                                                         {{ __('Forgot Your Password?') }}
